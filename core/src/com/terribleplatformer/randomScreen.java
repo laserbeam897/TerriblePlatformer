@@ -44,8 +44,8 @@ public class randomScreen implements InputProcessor, Screen {
     @Override public boolean touchDragged (int screenX, int screenY, int pointer) {return false;}
     @Override public boolean touchUp (int screenX, int screenY, int pointer, int button) { isDragged = false; return false;}
     @Override public void resize (int width, int height) { return;}
-    @Override
-    public void randonScreen() {
+
+    public randomScreen() {
         shapeRenderer = new ShapeRenderer();
         batch = new SpriteBatch();
         img = new Texture("badlogic.jpg");
@@ -112,5 +112,18 @@ public class randomScreen implements InputProcessor, Screen {
         batch.dispose();
         img.dispose();
     }
+
+    @Override
+    public void hide(){ }
+ 
+    @Override
+    public void pause(){}
+
+    @Override
+    public void resume(){}
+
+    @Override
+    public void show(){}
+    
 }
 
